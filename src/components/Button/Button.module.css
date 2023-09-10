@@ -1,18 +1,8 @@
 .button {
+  border: 0;
   cursor: pointer;
   color: var(--white);
-}
-
-.primary {
-  background-color: rgba(var(--primary));
-}
-
-.secondary {
-  background-color: rgba(var(--secondary));
-}
-
-.outline {
-  border: 1px solid var(--primary);
+  border-radius: var(--radius-default);
 }
 
 .sm {
@@ -29,3 +19,64 @@
   padding: var(--spacing-size-xs) var(--spacing-size-md);
   font-size: var(--font-size-lg);
 }
+
+.primary {
+  background-color: rgba(var(--primary));
+}
+
+.primary.outline {
+  color: rgba(var(--primary));
+  background-color: transparent;
+  border: 1px solid rgba(var(--primary));
+}
+
+.secondary {
+  background-color: rgba(var(--secondary));
+}
+
+.secondary.outline {
+  color: rgba(var(--secondary));
+  background-color: transparent;
+  border: 1px solid rgba(var(--secondary));
+}
+
+.success {
+  background-color: rgba(var(--success));
+}
+
+.success.outline {
+  color: rgba(var(--success));
+  background-color: transparent;
+  border: 1px solid rgba(var(--success));
+}
+
+.info {
+  background-color: rgba(var(--info));
+}
+
+.info.outline {
+  color: rgba(var(--info));
+  background-color: transparent;
+  border: 1px solid rgba(var(--info));
+}
+
+.warning {
+  background-color: rgba(var(--warning));
+}
+
+.warning.outline {
+  color: rgba(var(--warning));
+  background-color: transparent;
+  border: 1px solid rgba(var(--warning));
+}
+
+.danger {
+  background-color: rgba(var(--danger));
+}
+
+.danger.outline {
+  color: rgba(var(--danger));
+  background-color: transparent;
+  border: 1px solid rgba(var(--danger));
+}
+

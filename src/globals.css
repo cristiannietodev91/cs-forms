@@ -33,6 +33,7 @@
   --radius-none: 0em;
   --radius-sm: 0.125em;
   --radius-md: 0.25em;
+  --radius-default: 0.25em;
   --radius-lg: 0.375em;
   --radius-xl: 0.75em;
   --radius-xxl: 1em;
@@ -54,7 +55,6 @@
   --info: 76, 83, 210;
   --warning: 227, 197, 0;
   --danger: 224, 4, 4;
-  --light: ;
   --white: #fff;
   --blue-100: #003346;
   --blue-200: #003467;

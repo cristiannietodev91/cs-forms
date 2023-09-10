@@ -9,6 +9,7 @@ const Button = ({
 	className,
 	variant = "primary",
 	size = "sm",
+	outline = false
 }: ButtonProps) => {
 	return (
 		<button
@@ -16,6 +17,7 @@ const Button = ({
 				...(className && { [className]: true }),
 				...(styles[size] && { [styles[size]]: true }),
 				...(styles[variant] && { [styles[variant]]: true }),
+				[styles.outline]: outline,
 			})}
 			onClick={onClick}
 		>
