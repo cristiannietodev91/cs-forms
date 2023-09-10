@@ -59,6 +59,70 @@ export const AllButtons: Story = {
 		<Button variant="danger" size="sm" outline>Small</Button>
 		<Button variant="danger" size="md" outline>Medium</Button>
 		<Button variant="danger" size="lg" outline>Large</Button>
+		<br />
+		<Button variant="plain" size="sm">Small</Button>
+		<Button variant="plain" size="md">Medium</Button>
+		<Button variant="plain" size="lg">Large</Button>
+	</>,
+};
+
+export const AllLinks: Story = {
+	args: {
+		href: "#test-link",
+		target: "_self"
+	},
+	render: (args) => <>
+		<Button {...args} variant="primary" size="sm">Small</Button>
+		<Button {...args} variant="primary" size="md">Medium</Button>
+		<Button {...args} variant="primary" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="primary" size="sm" outline>Small</Button>
+		<Button {...args} variant="primary" size="md" outline>Medium</Button>
+		<Button {...args} variant="primary" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="secondary" size="sm">Small</Button>
+		<Button {...args} variant="secondary" size="md">Medium</Button>
+		<Button variant="secondary" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="secondary" size="sm" outline>Small</Button>
+		<Button {...args} variant="secondary" size="md" outline>Medium</Button>
+		<Button {...args} variant="secondary" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="success" size="sm">Small</Button>
+		<Button {...args} variant="success" size="md">Medium</Button>
+		<Button {...args} variant="success" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="success" size="sm" outline>Small</Button>
+		<Button {...args} variant="success" size="md" outline>Medium</Button>
+		<Button {...args} variant="success" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="info" size="sm">Small</Button>
+		<Button {...args} variant="info" size="md">Medium</Button>
+		<Button {...args} variant="info" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="info" size="sm" outline>Small</Button>
+		<Button {...args} variant="info" size="md" outline>Medium</Button>
+		<Button {...args} variant="info" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="warning" size="sm">Small</Button>
+		<Button {...args} variant="warning" size="md">Medium</Button>
+		<Button {...args} variant="warning" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="warning" size="sm" outline>Small</Button>
+		<Button {...args} variant="warning" size="md" outline>Medium</Button>
+		<Button {...args} variant="warning" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="danger" size="sm">Small</Button>
+		<Button {...args} variant="danger" size="md">Medium</Button>
+		<Button {...args} variant="danger" size="lg">Large</Button>
+		<br />
+		<Button {...args} variant="danger" size="sm" outline>Small</Button>
+		<Button {...args} variant="danger" size="md" outline>Medium</Button>
+		<Button {...args} variant="danger" size="lg" outline>Large</Button>
+		<br />
+		<Button {...args} variant="plain" size="sm">Small</Button>
+		<Button {...args} variant="plain" size="md">Medium</Button>
+		<Button {...args} variant="plain" size="lg">Large</Button>
 	</>,
 };
 
@@ -88,7 +152,7 @@ export const TextWithIcon: Story = {
 	argTypes: {
 		variant: {
 			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info"]
+			options: ["primary", "secondary", "success", "warning", "info", "plain"]
 		}
 	},
 	render: (args) => <>
@@ -96,6 +160,20 @@ export const TextWithIcon: Story = {
 		<br />
 		<Button {...args}><i className="fa fa-bars"></i> Label</Button>
 	</>
+};
+
+export const ButtonLink: Story = {
+	args: {
+		href: "#test-link",
+		target: "_self"
+	},
+	argTypes: {
+		variant: {
+			control: "inline-radio",
+			options: ["primary", "secondary", "success", "warning", "info", "plain"]
+		}
+	},
+	render: (args) => <Button {...args} href="#test">Link</Button>
 };
 
 

@@ -5,6 +5,12 @@
   border-radius: var(--radius-default);
 }
 
+.link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: var(--radius-default);
+}
+
 .sm {
   padding: var(--spacing-size-xs) var(--spacing-size-md);
   font-size: var(--font-size-sm);
@@ -78,5 +84,10 @@
   color: rgba(var(--danger));
   background-color: transparent;
   border: 1px solid rgba(var(--danger));
+}
+
+.plain {
+  color: rgba(var(--blue-600));
+  background-color: transparent;
 }
 
