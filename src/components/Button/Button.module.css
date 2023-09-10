@@ -30,10 +30,19 @@
   background-color: rgba(var(--primary));
 }
 
+.primary:hover {
+  background-color: rgba(var(--primary-darker));
+  box-shadow: var(--shadow-sm);
+}
+
 .primary.outline {
   color: rgba(var(--primary));
   background-color: transparent;
   border: 1px solid rgba(var(--primary));
+}
+
+.primary.outline:hover {
+  background-color: rgba(var(--primary-lighter));
 }
 
 .secondary {
