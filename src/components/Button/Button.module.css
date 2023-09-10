@@ -1,0 +1,31 @@
+.button {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.primary {
+  background-color: rgba(var(--primary));
+}
+
+.secondary {
+  background-color: rgba(var(--secondary));
+}
+
+.outline {
+  border: 1px solid var(--primary);
+}
+
+.sm {
+  padding: var(--spacing-size-xs) var(--spacing-size-md);
+  font-size: var(--font-size-sm);
+}
+
+.md {
+  padding: var(--spacing-size-xs) var(--spacing-size-md);
+  font-size: var(--font-size-md);
+}
+
+.lg {
+  padding: var(--spacing-size-xs) var(--spacing-size-md);
+  font-size: var(--font-size-lg);
+}
