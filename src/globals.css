@@ -50,8 +50,6 @@
 
   /**** Colors ******/
   --primary: 50, 109, 166;
-  --primary-lighter: 175, 203, 231;
-  --primary-darker: 35, 76, 117;
   --secondary: 0, 52, 103;
   --success: 96, 182, 20;
   --info: 76, 83, 210;
@@ -75,6 +73,18 @@
   --gray-900: #343A40;
   --gray-1000: #212529;
 
+  --primary-lighter: color-mix(in srgb, rgba(var(--primary)) 20%, white);
+  --primary-darker: color-mix(in srgb, rgba(var(--primary)) 90%, black);
+  --secondary-lighter: color-mix(in srgb, rgba(var(--secondary)) 20%, white);
+  --secondary-darker: color-mix(in srgb, rgba(var(--secondary)) 90%, black);
+  --success-lighter: color-mix(in srgb, rgba(var(--success)) 20%, white);
+  --success-darker: color-mix(in srgb, rgba(var(--success)) 90%, black);
+  --info-lighter: color-mix(in srgb, rgba(var(--info)) 20%, white);
+  --info-darker: color-mix(in srgb, rgba(var(--info)) 90%, black);
+  --warning-lighter: color-mix(in srgb, rgba(var(--warning)) 20%, white);
+  --warning-darker: color-mix(in srgb, rgba(var(--warning)) 90%, black);
+  --danger-lighter: color-mix(in srgb, rgba(var(--danger)) 20%, white);
+  --danger-darker: color-mix(in srgb, rgba(var(--danger)) 90%, black);
 }
 
 body,

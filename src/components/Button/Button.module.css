@@ -31,8 +31,8 @@
 }
 
 .primary:hover {
-  background-color: rgba(var(--primary-darker));
-  box-shadow: var(--shadow-sm);
+  background-color: var(--primary-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .primary.outline {
@@ -42,11 +42,16 @@
 }
 
 .primary.outline:hover {
-  background-color: rgba(var(--primary-lighter));
+  background-color: var(--primary-lighter);
 }
 
 .secondary {
   background-color: rgba(var(--secondary));
+}
+
+.secondary:hover {
+  background-color: var(--secondary-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .secondary.outline {
@@ -55,8 +60,17 @@
   border: 1px solid rgba(var(--secondary));
 }
 
+.secondary.outline:hover {
+  background-color: var(--secondary-lighter);
+}
+
 .success {
   background-color: rgba(var(--success));
+}
+
+.success:hover {
+  background-color: var(--success-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .success.outline {
@@ -65,8 +79,17 @@
   border: 1px solid rgba(var(--success));
 }
 
+.success.outline:hover {
+  background-color: var(--success-lighter);
+}
+
 .info {
   background-color: rgba(var(--info));
+}
+
+.info:hover {
+  background-color: var(--info-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .info.outline {
@@ -75,8 +98,17 @@
   border: 1px solid rgba(var(--info));
 }
 
+.info.outline:hover {
+  background-color: var(--info-lighter);
+}
+
 .warning {
   background-color: rgba(var(--warning));
+}
+
+.warning:hover {
+  background-color: var(--warning-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .warning.outline {
@@ -85,8 +117,17 @@
   border: 1px solid rgba(var(--warning));
 }
 
+.warning.outline:hover {
+  background-color: var(--warning-lighter);
+}
+
 .danger {
   background-color: rgba(var(--danger));
+}
+
+.danger:hover {
+  background-color: var(--danger-darker);
+  box-shadow: var(--shadow-xs);
 }
 
 .danger.outline {
@@ -95,8 +136,13 @@
   border: 1px solid rgba(var(--danger));
 }
 
+.danger.outline:hover {
+  background-color: var(--danger-lighter);
+}
+
 .plain {
   color: rgba(var(--blue-600));
   background-color: transparent;
 }
+
 

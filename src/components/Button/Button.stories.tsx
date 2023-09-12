@@ -142,7 +142,7 @@ export const WithIcon: Story = {
 	argTypes: {
 		variant: {
 			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info"]
+			options: ["primary", "secondary", "success", "warning", "info", "plain"]
 		}
 	},
 	render: (args) => <Button {...args}><i className="fa fa-cloud"></i></Button>
