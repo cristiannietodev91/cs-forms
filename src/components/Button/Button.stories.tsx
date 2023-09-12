@@ -4,7 +4,13 @@ import Button from "./Button";
 
 const meta: Meta<typeof Button> = {
 	title: "CS Design System / Button",
-	component: Button
+	component: Button,
+	argTypes: {
+		variant: {
+			control: "inline-radio",
+			options: ["primary", "secondary", "success", "warning", "info", "plain"]
+		}
+	},
 };
 
 export default meta;
@@ -139,22 +145,10 @@ export const AllSizes: Story = {
 };
 
 export const WithIcon: Story = {
-	argTypes: {
-		variant: {
-			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info", "plain"]
-		}
-	},
 	render: (args) => <Button {...args}><i className="fa fa-cloud"></i></Button>
 };
 
 export const TextWithIcon: Story = {
-	argTypes: {
-		variant: {
-			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info", "plain"]
-		}
-	},
 	render: (args) => <>
 		<Button {...args}>Label <i className="fa fa-bars"></i></Button>
 		<br />
@@ -166,12 +160,6 @@ export const ButtonLink: Story = {
 	args: {
 		href: "#test-link",
 		target: "_self"
-	},
-	argTypes: {
-		variant: {
-			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info", "plain"]
-		}
 	},
 	render: (args) => <Button {...args} href="#test">Link</Button>
 };

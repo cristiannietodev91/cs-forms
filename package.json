@@ -28,12 +28,15 @@
     "@storybook/addon-links": "^7.4.0",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.4.0",
+    "@storybook/builder-vite": "^7.4.1",
     "@storybook/react": "^7.4.0",
     "@storybook/react-vite": "^7.4.0",
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "chromatic": "^7.1.0",
     "eslint": "^8.49.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-storybook": "^0.6.13",
@@ -45,7 +48,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.4.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5"
   },
   "dependencies": {
     "classnames": "^2.3.2"
