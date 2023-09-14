@@ -17,8 +17,7 @@ export const buttonSizes = [
 export type ButtonVariant = (typeof buttonVariants)[number];
 export type ButtonSize = (typeof buttonSizes)[number];
 
-export interface ButtonProps  {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -26,10 +25,7 @@ export interface ButtonProps  {
   children: React.ReactNode;
 }
 
-export interface LinkProps {
-  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
-  target?: React.HTMLAttributeAnchorTarget | undefined;
-  href?: string;
+export interface LinkProps extends React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>{
   className?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;

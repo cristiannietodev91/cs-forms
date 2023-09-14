@@ -103,6 +103,7 @@
 }
 
 .warning {
+  color: rgba(var(--black));
   background-color: rgba(var(--warning));
 }
 

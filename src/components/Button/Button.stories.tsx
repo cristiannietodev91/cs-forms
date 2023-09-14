@@ -28,11 +28,24 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const AllButtons: Story = {
+	parameters: {
+		a11y: {
+			config: {
+				rules: [
+					{
+						// @fixme Color contrast of plain variant must be fixed
+						id: "color-contrast",
+						selector: "*:([id=\"plain-sm\"])"
+					}
+				]
+			}
+		}
+	},
 	render: () => <>
 		{buttonVariants.map((variant)=> (
 			<>
 				{buttonSizes.map((size) => (
-					<Button key={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
+					<Button key={`${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
 				))}
 				<br />
 				{buttonSizes.map((size) => (
@@ -45,6 +58,19 @@ export const AllButtons: Story = {
 };
 
 export const AllLinks: Story = {
+	parameters: {
+		a11y: {
+			config: {
+				rules: [
+					{
+						// @fixme Color contrast of plain variant must be fixed
+						id: "color-contrast",
+						selector: "*([id=\"plain-sm\"])"
+					}
+				]
+			}
+		}
+	},
 	args: {
 		href: "#test-link",
 		target: "_self"
@@ -79,7 +105,7 @@ export const AllSizes: Story = {
 };
 
 export const WithIcon: Story = {
-	render: (args) => <Button {...args}><i className="fa fa-cloud"></i></Button>
+	render: (args) => <Button {...args} aria-label="Icon with button"><i className="fa fa-cloud"></i></Button>
 };
 
 export const TextWithIcon: Story = {

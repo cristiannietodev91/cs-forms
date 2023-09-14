@@ -15,12 +15,14 @@ const Button = (props: ButtonProps | LinkProps) => {
 		size = "sm", 
 		variant = "primary", 
 		outline,
-		children 
+		children,
+		...restProps
 	} = props;
 
 	return (
 		!renderAsLink ?
 			<button
+				{...restProps as ButtonProps}
 				className={cx(styles.button, {
 					...(className && { [className]: true }),
 					...(styles[size] && { [styles[size]]: true }),
@@ -33,6 +35,7 @@ const Button = (props: ButtonProps | LinkProps) => {
 			</button>
 			:
 			<a 
+				{...restProps as LinkProps}
 				className={cx(styles.link, {
 					...(styles[size] && { [styles[size]]: true }),
 					...(styles[variant] && { [styles[variant]]: true }),
