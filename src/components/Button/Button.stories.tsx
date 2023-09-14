@@ -1,6 +1,10 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
+import { buttonVariants, buttonSizes } from "./Button.types";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
+
 
 const meta: Meta<typeof Button> = {
 	title: "CS Design System / Button",
@@ -9,8 +13,15 @@ const meta: Meta<typeof Button> = {
 		variant: {
 			control: "inline-radio",
 			options: ["primary", "secondary", "success", "warning", "info", "plain"]
-		}
+		},
+		onClick: { action: "clicked" }
 	},
+};
+
+const mapSizesText = {
+	sm: "Small",
+	md: "Medium",
+	lg: "Large"
 };
 
 export default meta;
@@ -18,57 +29,18 @@ type Story = StoryObj<typeof Button>;
 
 export const AllButtons: Story = {
 	render: () => <>
-		<Button variant="primary" size="sm">Small</Button>
-		<Button variant="primary" size="md">Medium</Button>
-		<Button variant="primary" size="lg">Large</Button>
-		<br />
-		<Button variant="primary" size="sm" outline>Small</Button>
-		<Button variant="primary" size="md" outline>Medium</Button>
-		<Button variant="primary" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="secondary" size="sm">Small</Button>
-		<Button variant="secondary" size="md">Medium</Button>
-		<Button variant="secondary" size="lg">Large</Button>
-		<br />
-		<Button variant="secondary" size="sm" outline>Small</Button>
-		<Button variant="secondary" size="md" outline>Medium</Button>
-		<Button variant="secondary" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="success" size="sm">Small</Button>
-		<Button variant="success" size="md">Medium</Button>
-		<Button variant="success" size="lg">Large</Button>
-		<br />
-		<Button variant="success" size="sm" outline>Small</Button>
-		<Button variant="success" size="md" outline>Medium</Button>
-		<Button variant="success" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="info" size="sm">Small</Button>
-		<Button variant="info" size="md">Medium</Button>
-		<Button variant="info" size="lg">Large</Button>
-		<br />
-		<Button variant="info" size="sm" outline>Small</Button>
-		<Button variant="info" size="md" outline>Medium</Button>
-		<Button variant="info" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="warning" size="sm">Small</Button>
-		<Button variant="warning" size="md">Medium</Button>
-		<Button variant="warning" size="lg">Large</Button>
-		<br />
-		<Button variant="warning" size="sm" outline>Small</Button>
-		<Button variant="warning" size="md" outline>Medium</Button>
-		<Button variant="warning" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="danger" size="sm">Small</Button>
-		<Button variant="danger" size="md">Medium</Button>
-		<Button variant="danger" size="lg">Large</Button>
-		<br />
-		<Button variant="danger" size="sm" outline>Small</Button>
-		<Button variant="danger" size="md" outline>Medium</Button>
-		<Button variant="danger" size="lg" outline>Large</Button>
-		<br />
-		<Button variant="plain" size="sm">Small</Button>
-		<Button variant="plain" size="md">Medium</Button>
-		<Button variant="plain" size="lg">Large</Button>
+		{buttonVariants.map((variant)=> (
+			<>
+				{buttonSizes.map((size) => (
+					<Button key={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
+				))}
+				<br />
+				{buttonSizes.map((size) => (
+					<Button key={`${variant}-${size}`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+				))}
+				<br />
+			</>
+		))}
 	</>,
 };
 
@@ -78,69 +50,31 @@ export const AllLinks: Story = {
 		target: "_self"
 	},
 	render: (args) => <>
-		<Button {...args} variant="primary" size="sm">Small</Button>
-		<Button {...args} variant="primary" size="md">Medium</Button>
-		<Button {...args} variant="primary" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="primary" size="sm" outline>Small</Button>
-		<Button {...args} variant="primary" size="md" outline>Medium</Button>
-		<Button {...args} variant="primary" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="secondary" size="sm">Small</Button>
-		<Button {...args} variant="secondary" size="md">Medium</Button>
-		<Button variant="secondary" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="secondary" size="sm" outline>Small</Button>
-		<Button {...args} variant="secondary" size="md" outline>Medium</Button>
-		<Button {...args} variant="secondary" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="success" size="sm">Small</Button>
-		<Button {...args} variant="success" size="md">Medium</Button>
-		<Button {...args} variant="success" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="success" size="sm" outline>Small</Button>
-		<Button {...args} variant="success" size="md" outline>Medium</Button>
-		<Button {...args} variant="success" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="info" size="sm">Small</Button>
-		<Button {...args} variant="info" size="md">Medium</Button>
-		<Button {...args} variant="info" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="info" size="sm" outline>Small</Button>
-		<Button {...args} variant="info" size="md" outline>Medium</Button>
-		<Button {...args} variant="info" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="warning" size="sm">Small</Button>
-		<Button {...args} variant="warning" size="md">Medium</Button>
-		<Button {...args} variant="warning" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="warning" size="sm" outline>Small</Button>
-		<Button {...args} variant="warning" size="md" outline>Medium</Button>
-		<Button {...args} variant="warning" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="danger" size="sm">Small</Button>
-		<Button {...args} variant="danger" size="md">Medium</Button>
-		<Button {...args} variant="danger" size="lg">Large</Button>
-		<br />
-		<Button {...args} variant="danger" size="sm" outline>Small</Button>
-		<Button {...args} variant="danger" size="md" outline>Medium</Button>
-		<Button {...args} variant="danger" size="lg" outline>Large</Button>
-		<br />
-		<Button {...args} variant="plain" size="sm">Small</Button>
-		<Button {...args} variant="plain" size="md">Medium</Button>
-		<Button {...args} variant="plain" size="lg">Large</Button>
+		{buttonVariants.map((variant)=> (
+			<>
+				{buttonSizes.map((size) => (
+					<Button {...args} key={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
+				))}
+				<br />
+				{buttonSizes.map((size) => (
+					<Button {...args} key={`${variant}-${size}`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+				))}
+				<br />
+			</>
+		))}
 	</>,
 };
 
 export const AllSizes: Story = {
 	render: () => <>
-		<Button variant="primary" size="sm">Small</Button>
-		<br/>
-		<br/>
-		<Button variant="primary" size="md">Medium</Button>
-		<br/>
-		<br/>
-		<Button variant="primary" size="lg">Large</Button>
+		{buttonSizes.map((size) => (
+			<>
+				<Button key={`${size}`} size={size}>{mapSizesText[size]}</Button>
+				<br/>
+				<br/>
+			</>
+		))}
+		
 	</>,
 };
 
@@ -162,6 +96,22 @@ export const ButtonLink: Story = {
 		target: "_self"
 	},
 	render: (args) => <Button {...args} href="#test">Link</Button>
+};
+
+export const LinkInteractive: Story = {
+	args: {
+		href: "#test-link",
+		target: "_self",
+		children: "Link"
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+		await userEvent.click(canvas.getByRole("link"));
+		await expect(canvas.getByRole("link")).toHaveAttribute(   
+			"href",
+			"#test-link",
+		);
+	}
 };
 
 

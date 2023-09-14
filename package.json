@@ -10,7 +10,8 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "author": {
     "name": "Cristian Nieto",
@@ -29,8 +30,10 @@
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.4.0",
     "@storybook/builder-vite": "^7.4.1",
+    "@storybook/jest": "^0.2.2",
     "@storybook/react": "^7.4.0",
     "@storybook/react-vite": "^7.4.0",
+    "@storybook/test-runner": "^0.13.0",
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
