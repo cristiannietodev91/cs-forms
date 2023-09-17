@@ -9,14 +9,16 @@ import { expect } from "@storybook/jest";
 const meta: Meta<typeof Button> = {
 	title: "CS Design System / Button",
 	component: Button,
+	tags: ["autodocs"],
 	argTypes: {
 		variant: {
 			control: "inline-radio",
-			options: ["primary", "secondary", "success", "warning", "info", "plain"]
+			options: buttonVariants,
 		},
 		onClick: { action: "clicked" }
 	},
 	parameters: {
+		componentSubtitle: "Interactive button activated by a user through click, voice, keyboard or other assistive technology",
 		a11y: {
 			config: {
 				rules: [
@@ -42,17 +44,28 @@ type Story = StoryObj<typeof Button>;
 
 export const AllButtons: Story = {
 	render: () => <>
-		{buttonVariants.map((variant)=> (
+		{buttonVariants.filter((variant)=> variant !== "plain").map((variant)=> (
 			<>
+				<h3>{`${variant}`}</h3>
+				<br />
 				{buttonSizes.map((size) => (
 					<Button key={`${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
 				))}
+				<br />
+				<br />
+				<h4>{`${variant} - outlined`}</h4>
 				<br />
 				{buttonSizes.map((size) => (
 					<Button key={`${variant}-${size}`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
 				))}
 				<br />
+				<br />
 			</>
+		))}
+		<h3>plain</h3>
+		<br />
+		{buttonSizes.map((size) => (
+			<Button key={`plain-${size}`} id={`plain-${size}-outline`} variant="plain" size={size} outline>{mapSizesText[size]}</Button>
 		))}
 	</>,
 };

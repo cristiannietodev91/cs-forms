@@ -5,6 +5,9 @@ node_modules
 dist
 storybook-static
 
+# testing
+/coverage
+
 # misc
 .DS_Store
 .env.local

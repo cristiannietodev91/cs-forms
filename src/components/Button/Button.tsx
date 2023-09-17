@@ -42,8 +42,7 @@ const Button = (props: ButtonProps | LinkProps) => {
 					[styles.outline]: outline,
 				})}
 				href={props.href} 
-				target={props.target} 
-				onClick={props.onClick}>
+				target={props.target}>
 				{children}
 			</a>
 	);
