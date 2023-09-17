@@ -1,7 +1,11 @@
 {
-  "name": "cs-forms",
+  "name": "@cristian.nieto.dev/cs-forms",
   "version": "0.1.0",
   "description": "System design library created with React and Storybook",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristiannietodev91/cs-forms.git"
+  },
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -45,8 +49,6 @@
     "eslint": "^8.49.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-storybook": "^0.6.13",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "rollup": "^3.29.0",
     "rollup-plugin-dts": "^6.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -58,5 +60,24 @@
   },
   "dependencies": {
     "classnames": "^2.3.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "conventional-commits"
+    ]
   }
 }

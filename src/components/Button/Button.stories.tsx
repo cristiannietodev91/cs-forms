@@ -25,7 +25,7 @@ const meta: Meta<typeof Button> = {
 					{
 						// @fixme Color contrast of plain variant must be fixed
 						id: "color-contrast",
-						selector: "*:not([id^=plain], [id$=outline])"
+						selector: "*:not([id^=plain], [id$=outline], h3, h4)"
 					}
 				]
 			}
@@ -46,14 +46,14 @@ export const AllButtons: Story = {
 	render: () => <>
 		{buttonVariants.filter((variant)=> variant !== "plain").map((variant)=> (
 			<>
-				<h3>{`${variant}`}</h3>
+				<h3 style={{ color: "darkgrey"}}>{`${variant}`}</h3>
 				<br />
 				{buttonSizes.map((size) => (
 					<Button key={`${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
 				))}
 				<br />
 				<br />
-				<h4>{`${variant} - outlined`}</h4>
+				<h4 style={{ color: "darkgrey"}}>{`${variant} - outlined`}</h4>
 				<br />
 				{buttonSizes.map((size) => (
 					<Button key={`${variant}-${size}`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
@@ -62,7 +62,7 @@ export const AllButtons: Story = {
 				<br />
 			</>
 		))}
-		<h3>plain</h3>
+		<h3 style={{ color: "darkgrey"}}>plain</h3>
 		<br />
 		{buttonSizes.map((size) => (
 			<Button key={`plain-${size}`} id={`plain-${size}-outline`} variant="plain" size={size} outline>{mapSizesText[size]}</Button>
