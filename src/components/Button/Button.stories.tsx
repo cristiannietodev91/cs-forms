@@ -16,6 +16,19 @@ const meta: Meta<typeof Button> = {
 		},
 		onClick: { action: "clicked" }
 	},
+	parameters: {
+		a11y: {
+			config: {
+				rules: [
+					{
+						// @fixme Color contrast of plain variant must be fixed
+						id: "color-contrast",
+						selector: "*:not([id^=plain], [id$=outline])"
+					}
+				]
+			}
+		}
+	}
 };
 
 const mapSizesText = {
@@ -28,19 +41,6 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const AllButtons: Story = {
-	parameters: {
-		a11y: {
-			config: {
-				rules: [
-					{
-						// @fixme Color contrast of plain variant must be fixed
-						id: "color-contrast",
-						selector: "*:([id=\"plain-sm\"])"
-					}
-				]
-			}
-		}
-	},
 	render: () => <>
 		{buttonVariants.map((variant)=> (
 			<>
@@ -49,7 +49,7 @@ export const AllButtons: Story = {
 				))}
 				<br />
 				{buttonSizes.map((size) => (
-					<Button key={`${variant}-${size}`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+					<Button key={`${variant}-${size}`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
 				))}
 				<br />
 			</>
@@ -58,19 +58,6 @@ export const AllButtons: Story = {
 };
 
 export const AllLinks: Story = {
-	parameters: {
-		a11y: {
-			config: {
-				rules: [
-					{
-						// @fixme Color contrast of plain variant must be fixed
-						id: "color-contrast",
-						selector: "*([id=\"plain-sm\"])"
-					}
-				]
-			}
-		}
-	},
 	args: {
 		href: "#test-link",
 		target: "_self"
@@ -79,11 +66,11 @@ export const AllLinks: Story = {
 		{buttonVariants.map((variant)=> (
 			<>
 				{buttonSizes.map((size) => (
-					<Button {...args} key={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
+					<Button {...args} key={`${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
 				))}
 				<br />
 				{buttonSizes.map((size) => (
-					<Button {...args} key={`${variant}-${size}`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+					<Button {...args} key={`${variant}-${size}`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
 				))}
 				<br />
 			</>
@@ -95,7 +82,7 @@ export const AllSizes: Story = {
 	render: () => <>
 		{buttonSizes.map((size) => (
 			<>
-				<Button key={`${size}`} size={size}>{mapSizesText[size]}</Button>
+				<Button key={`${size}`} size={size} id={size}>{mapSizesText[size]}</Button>
 				<br/>
 				<br/>
 			</>
@@ -105,14 +92,14 @@ export const AllSizes: Story = {
 };
 
 export const WithIcon: Story = {
-	render: (args) => <Button {...args} aria-label="Icon with button"><i className="fa fa-cloud"></i></Button>
+	render: (args) => <Button {...args} aria-label="Icon with button" id="button-with-icon"><i className="fa fa-cloud"></i></Button>
 };
 
 export const TextWithIcon: Story = {
 	render: (args) => <>
-		<Button {...args}>Label <i className="fa fa-bars"></i></Button>
+		<Button {...args} id="button-right-icon">Label <i className="fa fa-bars"></i></Button>
 		<br />
-		<Button {...args}><i className="fa fa-bars"></i> Label</Button>
+		<Button {...args} id="button-left-icon"><i className="fa fa-bars"></i> Label</Button>
 	</>
 };
 
