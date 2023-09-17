@@ -12,6 +12,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
+    "release": "npm run build && auto shipit",
     "test": "test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -49,6 +50,8 @@
     "eslint": "^8.49.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-storybook": "^0.6.13",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "rollup": "^3.29.0",
     "rollup-plugin-dts": "^6.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
