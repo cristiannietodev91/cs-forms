@@ -1,3 +1,15 @@
+# v0.1.3 (Thu Sep 21 2023)
+
+#### 🐛 Bug Fix
+
+- TCK-001 Add disabled state to button component [#1](https://github.com/cristiannietodev91/cs-forms/pull/1) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.1 (Sun Sep 17 2023)
 
 #### ⚠️ Pushed to `main`
