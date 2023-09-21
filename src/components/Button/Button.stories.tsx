@@ -83,7 +83,7 @@ export const AllLinks: Story = {
 				))}
 				<br />
 				{buttonSizes.map((size) => (
-					<Button {...args} key={`${variant}-${size}`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+					<Button {...args} key={`${variant}-${size}-outline`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
 				))}
 				<br />
 			</>
@@ -96,6 +96,24 @@ export const AllSizes: Story = {
 		{buttonSizes.map((size) => (
 			<>
 				<Button key={`${size}`} size={size} id={size}>{mapSizesText[size]}</Button>
+				<br/>
+				<br/>
+			</>
+		))}
+		
+	</>,
+};
+
+export const Disabled: Story = {
+	render: (args) => <>
+		{buttonVariants.map((variant) => (
+			<>
+				<Button key={`${variant}-btn`} id={`${variant}-btn`} size={args.size} variant={variant}  disabled>{variant}</Button>
+				<Button key={`${variant}-btn-outline`} id={`${variant}-btn-outline`} size={args.size} variant={variant}  outline disabled>{variant}</Button>
+				<br/>
+				<br/>
+				<Button key={`${variant}-link`} id={`${variant}-link`} size={args.size} variant={variant} href="#test-link" target="_self" disabled>{`Link ${variant}`}</Button>
+				<Button key={`${variant}-lnk-outline`} id={`${variant}-lnk-outline`} size={args.size} variant={variant} href="#test-link" target="_self" outline disabled>{`Link ${variant}`}</Button>
 				<br/>
 				<br/>
 			</>

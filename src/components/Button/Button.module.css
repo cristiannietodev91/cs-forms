@@ -146,4 +146,20 @@
   background-color: transparent;
 }
 
+.disabled {
+  pointer-events: none;
+  background-color: rgba(var(--black), 0.12);
+  color: rgba(var(--black), 0.26);
+}
+
+.outline.disabled {
+  border: 1px solid rgba(var(--black), 0.12);
+  color: rgba(var(--black), 0.26);
+}
+
+.plain.disabled {
+  border: none;
+  background-color: transparent;
+}
+
 

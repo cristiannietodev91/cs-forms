@@ -16,8 +16,11 @@ const Button = (props: ButtonProps | LinkProps) => {
 		variant = "primary", 
 		outline,
 		children,
+		disabled = false,
 		...restProps
 	} = props;
+
+	const { href, ...linkProps  } = restProps as LinkProps;
 
 	return (
 		!renderAsLink ?
@@ -28,21 +31,27 @@ const Button = (props: ButtonProps | LinkProps) => {
 					...(styles[size] && { [styles[size]]: true }),
 					...(styles[variant] && { [styles[variant]]: true }),
 					[styles.outline]: outline,
+					[styles.disabled]: disabled,
 				})}
 				onClick={props.onClick}
+				disabled={disabled}
 			>
 				{children}
 			</button>
 			:
 			<a 
-				{...restProps as LinkProps}
+				{...linkProps}
 				className={cx(styles.link, {
 					...(styles[size] && { [styles[size]]: true }),
 					...(styles[variant] && { [styles[variant]]: true }),
 					[styles.outline]: outline,
+					[styles.disabled]: disabled,
 				})}
-				href={props.href} 
-				target={props.target}>
+				{...(!disabled && { href })}
+				{...(disabled && { "aria-disabled": true })}
+				target={props.target}
+				role="link"
+			>
 				{children}
 			</a>
 	);
