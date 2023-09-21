@@ -41,6 +41,11 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
    * Element to render within the component can be a text or an icon
    */
   children: React.ReactNode;
+  /**
+   * When is true sets the component as disabled
+   * @default false
+   */
+  disabled?: boolean;
 }
 
 export interface LinkProps extends React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>{
@@ -53,4 +58,5 @@ export interface LinkProps extends React.DetailedHTMLProps<React.AnchorHTMLAttri
    * Buttons that have href are represented as &lt;a&gt; links
    */
   href?: string;
+  disabled?: boolean;
 }
