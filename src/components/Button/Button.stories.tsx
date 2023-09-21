@@ -18,6 +18,7 @@ const meta: Meta<typeof Button> = {
 		onClick: { action: "clicked" }
 	},
 	parameters: {
+		backgrounds: { disable: true },
 		componentSubtitle: "Interactive button activated by a user through click, voice, keyboard or other assistive technology",
 		a11y: {
 			config: {

@@ -1,13 +1,14 @@
 .button {
   border: 0;
   cursor: pointer;
-  color: var(--white);
+  color: rgba(var(--white));
   border-radius: var(--radius-default);
 }
 
 .link {
   display: inline-block;
   text-decoration: none;
+  color: rgba(var(--white));
   border-radius: var(--radius-default);
 }
 
@@ -148,13 +149,13 @@
 
 .disabled {
   pointer-events: none;
-  background-color: rgba(var(--black), 0.12);
-  color: rgba(var(--black), 0.26);
+  background-color: rgba(var(--disabled-bg-color), 0.12);
+  color: rgba(var(--disabled-bg-color), 0.3);
 }
 
 .outline.disabled {
-  border: 1px solid rgba(var(--black), 0.12);
-  color: rgba(var(--black), 0.26);
+  border: 1px solid rgba(var(--disabled-bg-color), 0.12);
+  color: rgba(var(--disabled-bg-color), 0.3);
 }
 
 .plain.disabled {
