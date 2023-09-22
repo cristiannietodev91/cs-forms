@@ -1,3 +1,15 @@
+# v0.1.5 (Fri Sep 22 2023)
+
+#### 🐛 Bug Fix
+
+- TCK-003 refactor button component to work with next/link [#3](https://github.com/cristiannietodev91/cs-forms/pull/3) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.4 (Fri Sep 22 2023)
 
 #### 🐛 Bug Fix
