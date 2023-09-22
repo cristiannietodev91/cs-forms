@@ -1,10 +1,11 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
+
+import autoprefixer from "autoprefixer";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const packageJson = require("./package.json");
@@ -21,7 +22,6 @@ export default [
 			{
 				file: packageJson.module,
 				format: "esm",
-				exports: "named",
 				sourcemap: true,
 			},
 		],
@@ -31,17 +31,12 @@ export default [
 			commonjs(),
 			typescript({ tsconfig: "./tsconfig.json" }),
 			postcss({
-				extract: true,
-				modules: true,
-				plugins: []
+				plugins: [autoprefixer()],
+				sourceMap: true,
+				minimize: true,
 			}),
 			terser(),
 		],
-		external: ["react", "react-dom"],
-	},
-	{
-		input: "src/index.ts",
-		output: [{ file: "dist/types.d.ts", format: "es" }],
-		plugins: [dts.default()],
+		external: ["react", "react-dom", "classnames"],
 	},
 ];

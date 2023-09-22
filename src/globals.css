@@ -1,94 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
 :root {
   /******** Fonts tokens **********/
-  --font-family-primary: 'Exo 2';
-  --font-family-secondary: sans-serif;
+  --cs-font-family-primary: 'Exo 2';
+  --cs-font-family-secondary: sans-serif;
   /* Font sizes */
-  --font-size-xxxl: 5.0625rem;
-  --font-size-xxl: 3.375rem;
-  --font-size-xl: 2.25rem;
-  --font-size-lg: 1.5rem;
-  --font-size-md: 1rem;
-  --font-size-sm: 0.725rem;
-  --font-size-xs: 0.5rem;
+  --cs-font-size-xxxl: 5.0625rem;
+  --cs-font-size-xxl: 3.375rem;
+  --cs-font-size-xl: 2.25rem;
+  --cs-font-size-lg: 1.5rem;
+  --cs-font-size-md: 1rem;
+  --cs-font-size-sm: 0.725rem;
+  --cs-font-size-xs: 0.5rem;
   /* Line heights */
-  --line-height-sm: 1.25;
-  --line-height-md: 1.375;
-  --line-height-lg: 1.625;
+  --cs-line-height-sm: 1.25;
+  --cs-line-height-md: 1.375;
+  --cs-line-height-lg: 1.625;
   /* Font weights */
-  --font-weight-thin: 100;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
+  --cs-font-weight-thin: 100;
+  --cs-font-weight-light: 300;
+  --cs-font-weight-normal: 400;
+  --cs-font-weight-semibold: 600;
+  --cs-font-weight-bold: 700;
+  --cs-font-weight-black: 900;
   /******** Space tokens *********/
-  --spacing-size-xxs: 0.125rem;
-  --spacing-size-xs: 0.25rem;
-  --spacing-size-sm: 0.5rem;
-  --spacing-size-md: 0.75rem;
-  --spacing-size-lg: 1rem;
-  --spacing-size-xl: 1.25rem;
-  --spacing-size-xxl: 1.5rem;
+  --cs-spacing-size-xxs: 0.125rem;
+  --cs-spacing-size-xs: 0.25rem;
+  --cs-spacing-size-sm: 0.5rem;
+  --cs-spacing-size-md: 0.75rem;
+  --cs-spacing-size-lg: 1rem;
+  --cs-spacing-size-xl: 1.25rem;
+  --cs-spacing-size-xxl: 1.5rem;
   /******** Radius **********/
-  --radius-none: 0em;
-  --radius-sm: 0.125em;
-  --radius-md: 0.25em;
-  --radius-default: 0.25em;
-  --radius-lg: 0.375em;
-  --radius-xl: 0.75em;
-  --radius-xxl: 1em;
+  --cs-radius-none: 0em;
+  --cs-radius-sm: 0.125em;
+  --cs-radius-md: 0.25em;
+  --cs-radius-default: 0.25em;
+  --cs-radius-lg: 0.375em;
+  --cs-radius-xl: 0.75em;
+  --cs-radius-xxl: 1em;
 
   /******* Shadow tokens *******/
-  --shadow-none: none;
-  --shadow-inner: inset 1px 2px 4px rgba(0, 0, 0, 0.10);
-  --shadow-outline: 0 0 0 3px rgba(0, 0, 0, 0.5);
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --shadow-sm: 0 3px 5px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.20);
+  --cs-shadow-none: none;
+  --cs-shadow-inner: inset 1px 2px 4px rgba(0, 0, 0, 0.10);
+  --cs-shadow-outline: 0 0 0 3px rgba(0, 0, 0, 0.5);
+  --cs-shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --cs-shadow-sm: 0 3px 5px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  --cs-shadow-md: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+  --cs-shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+  --cs-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.20);
 
   /**** Colors ******/
-  --primary: 50, 109, 166;
-  --secondary: 0, 52, 103;
-  --success: 70, 133, 15;
-  --info: 76, 83, 210;
-  --warning: 227, 197, 0;
-  --danger: 224, 4, 4;
-  --white: 255, 255, 255;
-  --black: 0, 0, 0;
-  --blue-100: 147, 205, 246;
-  --blue-200: 196, 227, 250;
-  --blue-300: 137, 200, 245;
-  --blue-400: 78, 173, 240;
-  --blue-500: 19, 146, 235;
-  --blue-600: 14, 109, 176;
-  --gray-100: #F9FAFB;
-  --gray-200: #E9ECEF;
-  --gray-300: #DEE2E6;
-  --gray-400: #CED4DA;
-  --gray-500: #ADB5BD;
-  --gray-600: #6C757D;
-  --gray-700: #495057;
-  --gray-800: #343A40;
-  --gray-900: #343A40;
-  --gray-1000: #212529;
+  --cs-primary: 50, 109, 166;
+  --cs-secondary: 0, 52, 103;
+  --cs-success: 70, 133, 15;
+  --cs-info: 76, 83, 210;
+  --cs-warning: 227, 197, 0;
+  --cs-danger: 224, 4, 4;
+  --cs-white: 255, 255, 255;
+  --cs-black: 0, 0, 0;
+  --cs-blue-100: 147, 205, 246;
+  --cs-blue-200: 196, 227, 250;
+  --cs-blue-300: 137, 200, 245;
+  --cs-blue-400: 78, 173, 240;
+  --cs-blue-500: 19, 146, 235;
+  --cs-blue-600: 14, 109, 176;
+  --cs-gray-100: #F9FAFB;
+  --cs-gray-200: #E9ECEF;
+  --cs-gray-300: #DEE2E6;
+  --cs-gray-400: #CED4DA;
+  --cs-gray-500: #ADB5BD;
+  --cs-gray-600: #6C757D;
+  --cs-gray-700: #495057;
+  --cs-gray-800: #343A40;
+  --cs-gray-900: #343A40;
+  --cs-gray-1000: #212529;
 
-  --primary-lighter: color-mix(in srgb, rgba(var(--primary)) 20%, white);
-  --primary-darker: color-mix(in srgb, rgba(var(--primary)) 90%, black);
-  --secondary-lighter: color-mix(in srgb, rgba(var(--secondary)) 20%, white);
-  --secondary-darker: color-mix(in srgb, rgba(var(--secondary)) 90%, black);
-  --success-lighter: color-mix(in srgb, rgba(var(--success)) 20%, white);
-  --success-darker: color-mix(in srgb, rgba(var(--success)) 90%, black);
-  --info-lighter: color-mix(in srgb, rgba(var(--info)) 20%, white);
-  --info-darker: color-mix(in srgb, rgba(var(--info)) 90%, black);
-  --warning-lighter: color-mix(in srgb, rgba(var(--warning)) 20%, white);
-  --warning-darker: color-mix(in srgb, rgba(var(--warning)) 90%, black);
-  --danger-lighter: color-mix(in srgb, rgba(var(--danger)) 20%, white);
-  --danger-darker: color-mix(in srgb, rgba(var(--danger)) 90%, black);
+  --cs-primary-lighter: color-mix(in srgb, rgba(var(--cs-primary)) 20%, white);
+  --cs-primary-darker: color-mix(in srgb, rgba(var(--cs-primary)) 90%, black);
+  --cs-secondary-lighter: color-mix(in srgb, rgba(var(--cs-secondary)) 20%, white);
+  --cs-secondary-darker: color-mix(in srgb, rgba(var(--cs-secondary)) 90%, black);
+  --cs-success-lighter: color-mix(in srgb, rgba(var(--cs-success)) 20%, white);
+  --cs-success-darker: color-mix(in srgb, rgba(var(--cs-success)) 90%, black);
+  --cs-info-lighter: color-mix(in srgb, rgba(var(--cs-info)) 20%, white);
+  --cs-info-darker: color-mix(in srgb, rgba(var(--cs-info)) 90%, black);
+  --cs-warning-lighter: color-mix(in srgb, rgba(var(--cs-warning)) 20%, white);
+  --cs-warning-darker: color-mix(in srgb, rgba(var(--cs-warning)) 90%, black);
+  --cs-danger-lighter: color-mix(in srgb, rgba(var(--cs-danger)) 20%, white);
+  --cs-danger-darker: color-mix(in srgb, rgba(var(--cs-danger)) 90%, black);
 
-  --disabled-bg-color: 0, 0, 0;
-  --color-bg-primary: 255, 255, 255;
+  --cs-disabled-bg-color: 0, 0, 0;
+  --cs-color-bg-primary: 255, 255, 255;
 }
 
 
@@ -101,8 +103,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --disabled-bg-color: 255, 255, 255;
-    --color-bg-primary: 0, 0, 0;
+    --cs-disabled-bg-color: 255, 255, 255;
+    --cs-color-bg-primary: 0, 0, 0;
   }
 
   html {
@@ -114,10 +116,10 @@ img {
   max-width: 100%;
 }
 
+
 body {
-  background: rgba(var(--color-bg-primary));
   font-size: 1.125rem;
-  font-family: var(--font-family-primary), var(--font-family-secondary);
+  font-family: var(--cs-font-family-primary), var(--cs-font-family-secondary);
 }
 
 a {

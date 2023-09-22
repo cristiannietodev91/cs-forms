@@ -7,7 +7,7 @@ const isLink = (props: ButtonProps | LinkProps): props is LinkProps => {
 	return (props as LinkProps).href !== undefined;
 };  
 
-const Button = (props: ButtonProps | LinkProps) => {
+export const Button = (props: ButtonProps | LinkProps) => {
 	const renderAsLink = isLink(props);
 
 	const { 
@@ -56,5 +56,3 @@ const Button = (props: ButtonProps | LinkProps) => {
 			</a>
 	);
 };
-
-export default Button;
