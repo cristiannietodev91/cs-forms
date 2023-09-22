@@ -5,6 +5,8 @@ import { buttonVariants, buttonSizes } from "./Button.types";
 import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
+import styles from "./Button.module.css";
+
 
 const meta: Meta<typeof Button> = {
 	title: "CS Design System / Button",
@@ -80,11 +82,11 @@ export const AllLinks: Story = {
 		{buttonVariants.map((variant)=> (
 			<>
 				{buttonSizes.map((size) => (
-					<Button {...args} key={`${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
+					<Button {...args} key={`link-${variant}-${size}`} id={`${variant}-${size}`} variant={variant} size={size}>{mapSizesText[size]}</Button>
 				))}
 				<br />
 				{buttonSizes.map((size) => (
-					<Button {...args} key={`${variant}-${size}-outline`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
+					<Button {...args} key={`link-${variant}-${size}-outline`} id={`${variant}-${size}-outline`} variant={variant} size={size} outline>{mapSizesText[size]}</Button>
 				))}
 				<br />
 			</>
@@ -159,5 +161,8 @@ export const LinkInteractive: Story = {
 	}
 };
 
+export const Custom: Story = {
+	render: (args) => <Button {...args} href="#test-link" target="_self" className={styles.customButton} isCustom>Custom</Button>
+};
 
 
