@@ -1,3 +1,15 @@
+# v0.1.4 (Fri Sep 22 2023)
+
+#### 🐛 Bug Fix
+
+- TCK-002 Bundle tweaks [#2](https://github.com/cristiannietodev91/cs-forms/pull/2) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.3 (Thu Sep 21 2023)
 
 #### 🐛 Bug Fix
