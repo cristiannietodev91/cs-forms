@@ -46,6 +46,11 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
    * @default false
    */
   disabled?: boolean;
+  /**
+   * When isCustom is true variant and sizes styles are not applied
+   * @default false
+   */
+  isCustom?: boolean;
 }
 
 export interface LinkProps extends React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>{
@@ -54,6 +59,7 @@ export interface LinkProps extends React.DetailedHTMLProps<React.AnchorHTMLAttri
   size?: ButtonSize;
   outline?: boolean;
   children: React.ReactNode;
+  isCustom?: boolean;
   /**
    * Buttons that have href are represented as &lt;a&gt; links
    */

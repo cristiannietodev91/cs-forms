@@ -5,9 +5,9 @@ import { ButtonProps, LinkProps } from "./Button.types";
 
 const isLink = (props: ButtonProps | LinkProps): props is LinkProps => {
 	return (props as LinkProps).href !== undefined;
-};  
+};
 
-export const Button = (props: ButtonProps | LinkProps) => {
+export const Button = React.forwardRef<HTMLAnchorElement, ButtonProps | LinkProps>(function Button(props, ref) {
 	const renderAsLink = isLink(props);
 
 	const { 
@@ -17,6 +17,7 @@ export const Button = (props: ButtonProps | LinkProps) => {
 		outline,
 		children,
 		disabled = false,
+		isCustom = false,
 		...restProps
 	} = props;
 
@@ -28,8 +29,8 @@ export const Button = (props: ButtonProps | LinkProps) => {
 				{...restProps as ButtonProps}
 				className={cx(styles.button, {
 					...(className && { [className]: true }),
-					...(styles[size] && { [styles[size]]: true }),
-					...(styles[variant] && { [styles[variant]]: true }),
+					...(styles[size] && { [styles[size]]: true && !isCustom }),
+					...(styles[variant] && { [styles[variant]]: true && !isCustom }),
 					[styles.outline]: outline,
 					[styles.disabled]: disabled,
 				})}
@@ -42,17 +43,20 @@ export const Button = (props: ButtonProps | LinkProps) => {
 			<a 
 				{...linkProps}
 				className={cx(styles.link, {
-					...(styles[size] && { [styles[size]]: true }),
-					...(styles[variant] && { [styles[variant]]: true }),
+					...(className && { [className]: true }),
+					...(styles[size] && { [styles[size]]: true && !isCustom }),
+					...(styles[variant] && { [styles[variant]]: true && !isCustom }),
 					[styles.outline]: outline,
 					[styles.disabled]: disabled,
 				})}
 				{...(!disabled && { href })}
 				{...(disabled && { "aria-disabled": true })}
+				onClick={props.onClick}
 				target={props.target}
 				role="link"
+				ref={ref}
 			>
 				{children}
 			</a>
 	);
-};
+});
