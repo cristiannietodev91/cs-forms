@@ -9,9 +9,9 @@
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf /dist && rollup -c --bundleConfigAsCjs",
     "release": "npm run build && auto shipit",
     "test": "test",
     "storybook": "storybook dev -p 6006",
