@@ -27,6 +27,8 @@ jobs:
             "npx wait-on tcp:6006 && npm run test-storybook"
       - name: Coveralls
         uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   visual-test:
     # The operating system it will run on
     runs-on: ubuntu-latest
