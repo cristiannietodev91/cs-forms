@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import { buttonVariants, buttonSizes } from "./Button.types";
 import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
+import cx from "classnames";
 
 import styles from "./Button.module.css";
 
@@ -161,8 +162,12 @@ export const LinkInteractive: Story = {
 	}
 };
 
-export const Custom: Story = {
-	render: (args) => <Button {...args} href="#test-link" target="_self" className={styles.customButton} isCustom>Custom</Button>
+export const LinkCustom: Story = {
+	render: (args) => <Button {...args} href="#test-link" target="_self" className={cx(styles.customStyle, styles.customLink)} isCustom>Custom</Button>
+};
+
+export const ButtonCustom: Story = {
+	render: (args) => <Button {...args} className={styles.customStyle} isCustom>Custom</Button>
 };
 
 

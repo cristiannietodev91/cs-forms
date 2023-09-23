@@ -27,7 +27,8 @@ export const Button = React.forwardRef<HTMLAnchorElement, ButtonProps | LinkProp
 		!renderAsLink ?
 			<button
 				{...restProps as ButtonProps}
-				className={cx(styles.button, {
+				className={cx({
+					[styles.button]: !isCustom,
 					...(className && { [className]: true }),
 					...(styles[size] && { [styles[size]]: true && !isCustom }),
 					...(styles[variant] && { [styles[variant]]: true && !isCustom }),
@@ -42,7 +43,8 @@ export const Button = React.forwardRef<HTMLAnchorElement, ButtonProps | LinkProp
 			:
 			<a 
 				{...linkProps}
-				className={cx(styles.link, {
+				className={cx({
+					[styles.link]: !isCustom,
 					...(className && { [className]: true }),
 					...(styles[size] && { [styles[size]]: true && !isCustom }),
 					...(styles[variant] && { [styles[variant]]: true && !isCustom }),

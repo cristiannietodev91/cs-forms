@@ -25,6 +25,12 @@ jobs:
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
             "npx wait-on tcp:6006 && npm run test-storybook"
+      - name: Generate lcov report
+        run: npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   visual-test:
     # The operating system it will run on
     runs-on: ubuntu-latest
