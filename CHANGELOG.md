@@ -1,3 +1,15 @@
+# v0.1.6 (Sat Sep 23 2023)
+
+#### 🐛 Bug Fix
+
+- TCK-004 remove all the styles when isCustom button [#4](https://github.com/cristiannietodev91/cs-forms/pull/4) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.5 (Fri Sep 22 2023)
 
 #### 🐛 Bug Fix
