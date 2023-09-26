@@ -43,6 +43,7 @@ export default [
 				],
 				{
 					once: true,
+					overwrite: true,
 				}
 			),
 			mv(
@@ -51,6 +52,7 @@ export default [
 				],
 				{
 					once: true,
+					overwrite: true,
 				}
 			),
 			terser(),
