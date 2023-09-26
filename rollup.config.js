@@ -6,6 +6,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 
 import autoprefixer from "autoprefixer";
+import mv from "rollup-plugin-mv";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const packageJson = require("./package.json");
@@ -31,10 +32,27 @@ export default [
 			commonjs(),
 			typescript({ tsconfig: "./tsconfig.json" }),
 			postcss({
-				plugins: [autoprefixer()],
-				sourceMap: true,
-				minimize: true,
+				plugins: [
+					autoprefixer()
+				],
+				extract: true,
 			}),
+			mv(
+				[
+					{ src: "dist/esm/index.css", dest: "dist/css/styles.css" },
+				],
+				{
+					once: true,
+				}
+			),
+			mv(
+				[
+					{ src: "dist/cjs/index.css", dest: "dist/css/styles.css" },
+				],
+				{
+					once: true,
+				}
+			),
 			terser(),
 		],
 		external: ["react", "react-dom", "classnames"],
