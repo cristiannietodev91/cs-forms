@@ -1,3 +1,19 @@
+# v0.1.7 (Tue Sep 26 2023)
+
+#### 🐛 Bug Fix
+
+- TCK-005 change bundle methodology extracting the component styles [#5](https://github.com/cristiannietodev91/cs-forms/pull/5) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### ⚠️ Pushed to `main`
+
+- Fix when create bundle ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.6 (Sat Sep 23 2023)
 
 #### 🐛 Bug Fix
