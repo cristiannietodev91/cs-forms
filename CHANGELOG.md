@@ -1,3 +1,15 @@
+# v0.2.0 (Fri Sep 29 2023)
+
+#### 🚀 Enhancement
+
+- Include styles within each component [#6](https://github.com/cristiannietodev91/cs-forms/pull/6) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.1.7 (Tue Sep 26 2023)
 
 #### 🐛 Bug Fix
