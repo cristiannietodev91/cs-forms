@@ -55,3 +55,26 @@ export const Page = () => {
 }
 ```
 
+### Next (SSR)
+
+In Next styles are not load server side which makes our components look unstylized in the First Contentful Paint (FCP). Use `NextSSRInjectStyle` cs-forms component to solve that.
+
+
+<h5 a><strong><code>layout.js (RootLayout)</code></strong></h5>
+```jsx
+import { NextSSRInjectStyle } from '@cristian.nieto.dev/cs-forms';
+
+export default function RootLayout({
+  children,
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <NextSSRInjectStyle />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
