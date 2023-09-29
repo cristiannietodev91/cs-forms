@@ -18,15 +18,29 @@ npm install @cristian.nieto.dev/cs-forms
 
 ### Usage
 
+#### Fonts
 
-Import the library styles globally. **(React example).**
+This library trusts in Exo2 google font which is not imported directly in our library to keep the performance.
 
-<h5 a><strong><code>App.js</code></strong></h5>
-```jsx
-import '@cristian.nieto.dev/cs-forms/dist/css/styles.css'
+You can import it in your project using css
+
+```html
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+</style> 
 ```
 
-Implement the component 
+or in the html header
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet"> 
+```
+
+### Components
+
+Import the component that you want to use.
 
 ```jsx
 import React from 'react'
@@ -41,4 +55,26 @@ export const Page = () => {
 }
 ```
 
-That's it! You are using cs-forms Cristian's library.
+### Next (SSR)
+
+In Next styles are not load server side which makes our components look unstylized in the First Contentful Paint (FCP). Use `NextSSRInjectStyle` cs-forms component to solve that.
+
+
+<h5 a><strong><code>layout.js (RootLayout)</code></strong></h5>
+```jsx
+import { NextSSRInjectStyle } from '@cristian.nieto.dev/cs-forms';
+
+export default function RootLayout({
+  children,
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <NextSSRInjectStyle />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
