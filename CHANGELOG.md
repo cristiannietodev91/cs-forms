@@ -1,3 +1,15 @@
+# v0.2.1 (Mon Oct 02 2023)
+
+#### 🐛 Bug Fix
+
+- Reduce bundle size [#7](https://github.com/cristiannietodev91/cs-forms/pull/7) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.2.0 (Fri Sep 29 2023)
 
 #### 🚀 Enhancement
