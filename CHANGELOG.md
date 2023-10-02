@@ -1,3 +1,15 @@
+# v0.2.2 (Mon Oct 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Hidding src folder from dist npm package ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.2.1 (Mon Oct 02 2023)
 
 #### 🐛 Bug Fix
