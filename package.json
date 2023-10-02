@@ -1,6 +1,6 @@
 {
   "name": "@cristian.nieto.dev/cs-forms",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "System design library created with React and Storybook",
   "repository": {
     "type": "git",
