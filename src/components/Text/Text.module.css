@@ -1,0 +1,69 @@
+.customText {
+  color: blue;
+  text-align: right;
+  line-height: 1em;
+  letter-spacing: 2em;
+}
+
+.xs {
+  font-size: var(--cs-font-size-xs);
+}
+
+.sm {
+  font-size: var(--cs-font-size-sm);
+}
+
+.md {
+  font-size: var(--cs-font-size-md);
+  line-height: var(--cs-line-height-md);
+  letter-spacing: 0.067em;
+}
+
+.lg {
+  font-size: var(--cs-font-size-lg);
+  font-weight: var(--cs-font-weight-normal);
+}
+
+.xlg {
+  font-size: var(--cs-font-size-xlg);
+  font-weight: var(--cs-font-weight-bold);
+}
+
+.xxlg {
+  font-size: var(--cs-font-size-xxlg);
+  font-weight: var(--cs-font-weight-bold);
+  letter-spacing: 0.107em;
+}
+
+.xxxlg {
+  font-size: var(--cs-font-size-xxxlg);
+  font-weight: var(--cs-font-weight-semibold);
+}
+
+.secondary {
+  opacity: 0.73;
+}
+
+.disabled {
+  opacity: 0.47;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.inline {
+  display: inline;
+}

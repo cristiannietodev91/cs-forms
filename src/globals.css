@@ -3,16 +3,16 @@
   --cs-font-family-primary: 'Exo 2';
   --cs-font-family-secondary: sans-serif;
   /* Font sizes */
-  --cs-font-size-xxxl: 5.0625rem;
-  --cs-font-size-xxl: 3.375rem;
-  --cs-font-size-xl: 2.25rem;
+  --cs-font-size-xxxlg: 5.0625rem;
+  --cs-font-size-xxlg: 3.375rem;
+  --cs-font-size-xlg: 2.25rem;
   --cs-font-size-lg: 1.5rem;
   --cs-font-size-md: 1rem;
   --cs-font-size-sm: 0.725rem;
   --cs-font-size-xs: 0.5rem;
   /* Line heights */
   --cs-line-height-sm: 1.25;
-  --cs-line-height-md: 1.375;
+  --cs-line-height-md: 1.475;
   --cs-line-height-lg: 1.625;
   /* Font weights */
   --cs-font-weight-thin: 100;

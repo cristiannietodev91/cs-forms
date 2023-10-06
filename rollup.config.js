@@ -32,10 +32,12 @@ export default (async () => ({
 		{
 			file: packageJson.main,
 			format: "cjs",
+			sourcemap: (isProduction ? false : "inline")
 		},
 		{
 			file: packageJson.module,
 			format: "esm",
+			sourcemap: (isProduction ? false : "inline")
 		},
 	],
 	plugins: [
