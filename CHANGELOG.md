@@ -1,3 +1,15 @@
+# v0.3.0 (Fri Oct 06 2023)
+
+#### 🚀 Enhancement
+
+- Add text component to the cs-forms system design [#8](https://github.com/cristiannietodev91/cs-forms/pull/8) ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+#### Authors: 1
+
+- Cristian Nieto ([@cristiannietodev91](https://github.com/cristiannietodev91))
+
+---
+
 # v0.2.2 (Mon Oct 02 2023)
 
 #### ⚠️ Pushed to `main`
